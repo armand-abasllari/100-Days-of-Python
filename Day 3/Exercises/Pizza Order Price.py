@@ -12,28 +12,28 @@ cheese = 1
 
 if size == "S":
     if add_pepperoni == "Y" and extra_cheese == "Y":
-        print  (f"Your final bill is: {small_pizza + p_small + cheese }")
+        print  (f"Your final bill is: $ {small_pizza + p_small + cheese }")
     elif add_pepperoni == "Y" and extra_cheese == "N":
-        print  (f"Your final bill is: {small_pizza + p_small }")
+        print  (f"Your final bill is: $  {small_pizza + p_small }")
     elif add_pepperoni == "N" and extra_cheese == "Y":
-        print  (f"Your final bill is: {small_pizza + cheese}")
+        print  (f"Your final bill is: $  {small_pizza + cheese}")
     elif add_pepperoni == "N" and extra_cheese == "N":
-        print  (f"Your final bill is: {small_pizza}")
+        print  (f"Your final bill is: $  {small_pizza}")
 elif size == "M":
     if add_pepperoni == "Y" and extra_cheese == "Y":
-        print  (f"Your final bill is: {medium_pizza + p_large + cheese }")
+        print  (f"Your final bill is: $  {medium_pizza + p_large + cheese }")
     elif add_pepperoni == "Y" and extra_cheese == "N":
-        print  (f"Your final bill is: {medium_pizza + p_large }")
+        print  (f"Your final bill is: $  {medium_pizza + p_large }")
     elif add_pepperoni == "N" and extra_cheese == "Y":
-        print  (f"Your final bill is: {medium_pizza + cheese}")
+        print  (f"Your final bill is: $  {medium_pizza + cheese}")
     elif add_pepperoni == "N" and extra_cheese == "N":
-        print  (f"Your final bill is: {medium_pizza}")
+        print  (f"Your final bill is: $  {medium_pizza}")
 else:
     if add_pepperoni == "Y" and extra_cheese == "Y":
-        print  (f"Your final bill is: {large_pizza + p_large + cheese }")
+        print  (f"Your final bill is: $  {large_pizza + p_large + cheese }")
     elif add_pepperoni == "Y" and extra_cheese == "N":
-        print  (f"Your final bill is: {large_pizza + p_large }")
+        print  (f"Your final bill is: $  {large_pizza + p_large }")
     elif add_pepperoni == "N" and extra_cheese == "Y":
-        print  (f"Your final bill is: {large_pizza + cheese}")
+        print  (f"Your final bill is: $  {large_pizza + cheese}")
     elif add_pepperoni == "N" and extra_cheese == "N":
-        print  (f"Your final bill is: {large_pizza}")
+        print  (f"Your final bill is: $  {large_pizza}")

@@ -1,3 +1,4 @@
+# Checking if a number is even or odd.
 print ("Check if a number is Even Or Odd")
 numbers = int(input("Write a number: "))
 

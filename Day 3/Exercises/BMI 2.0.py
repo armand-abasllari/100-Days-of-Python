@@ -1,4 +1,5 @@
-# Asking for the user's height and weight and then calculating the BMI.
+# Asking the user to input their height and weight and then calculating their BMI. It then prints out
+# a message based on their BMI.
 height = float(input("Enter your height in m:?"))
 weight = float(input("Enter your weight in kg?"))
 

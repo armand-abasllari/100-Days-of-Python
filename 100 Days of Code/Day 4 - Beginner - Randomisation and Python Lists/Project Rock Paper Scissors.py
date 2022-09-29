@@ -1,6 +1,7 @@
 import random
 
 
+# A rock paper scissors game.
 rock = '''
     _______
 ---'   ____)

@@ -1,7 +1,3 @@
-from multiprocessing.sharedctypes import Value
-from optparse import Values
-
-
 travel_log = [
 {
   "country": "France",
@@ -18,14 +14,12 @@ travel_log = [
 
 #TODO: Write the function that will allow new countries
 #to be added to the travel_log. 👇
-def add_new_country(country,visits,cities):
-
-    travel_log[cities][Values] = add_new_country[Values][Value]
-
-
-
-
-
+def add_new_country(name, visit_count, cities_visited):
+  new_country = {}
+  new_country["country"] = name
+  new_country["visits"] = visit_count
+  new_country["cities"] = cities_visited
+  travel_log.append(new_country)
 
 #🚨 Do not change the code below
 add_new_country("Russia", 2, ["Moscow", "Saint Petersburg"])

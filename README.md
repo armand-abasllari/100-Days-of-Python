@@ -54,4 +54,7 @@ Everyday will contain some excercises and a project/miniproject
 
 
 ## 100 Days of Code License
-This repository uses the [MIT License](/LICENSE).
+
+<a href="https://github.com/armand-abasllari/100-Days-of-Python/blob/master/licence" title="License">
+<img src="https://img.shields.io/github/license/king-technologies/Project-Initiator?label=License&logo=Github&style=flat-square" alt="Project Initiator License"/>
+</a>

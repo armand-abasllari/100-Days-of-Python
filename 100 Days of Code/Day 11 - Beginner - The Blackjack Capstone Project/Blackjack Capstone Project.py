@@ -1,6 +1,6 @@
-from art import logo
 import random
 import os
+from art import logo
 
 def deal_card():
     """Returns a random card from the deck."""
@@ -17,7 +17,15 @@ def calculate_score(cards):
         cards.append(1)
     return sum(cards)
 
+
 def compare(user_score, computer_score):
+    """
+    If you and the computer are both over, you lose
+    
+    :param user_score: The score of the user
+    :param computer_score: The score of the computer
+    :return: The result of the game.
+    """
     #Bug fix. If you and the computer are both over, you lose.
     if user_score > 21 and computer_score > 21:
         return "You went over. You lose 😤"
@@ -37,6 +45,12 @@ def compare(user_score, computer_score):
         return "You lose 😤"
 
 def play_game():
+    """
+    The function play_game() prints the logo, deals two cards to the user and the computer, asks the
+    user if they want to deal another card, deals another card to the user if they want to, deals cards
+    to the computer until the computer's score is 17 or higher, prints the user's and computer's final
+    hands and scores, and prints the result of the game.
+    """
 
     print(logo)
 

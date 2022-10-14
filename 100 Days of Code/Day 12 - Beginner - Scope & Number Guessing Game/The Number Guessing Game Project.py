@@ -1,4 +1,3 @@
-
 from random import randint
 from art import logo
 
@@ -19,15 +18,23 @@ def check_answer(guess, answer, turns):
 
 
 def set_difficulty():
+    """
+    It asks the user to choose a difficulty level, and then
+    returns the number of turns that the user will have based on their choice
+    :return: The number of turns the user has to guess the word.
+    """
     level = input("Choose a difficulty. Type 'easy' or 'hard': ")
     if level == "easy":
         return EASY_LEVEL_TURNS
     else:
         return HARD_LEVEL_TURNS
 
-def game():
+def guess_game():
+    """
+    It prints the logo, the welcome message, and the instructions.
+    """
     print(logo)
-    print("Welcome to the Number Guessing Game!")
+    print("Welcome to the Number Guessing guess_game!")
     print("I'm thinking of a number between 1 and 100.")
     answer = randint(1, 100)
     turns = set_difficulty()
@@ -44,4 +51,4 @@ def game():
             print("Guess again.")
 
 
-game()
+guess_game()

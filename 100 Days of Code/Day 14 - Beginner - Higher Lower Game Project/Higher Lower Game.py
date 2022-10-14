@@ -3,24 +3,7 @@ import os
 from game_data import data
 from art import logo
 from art import vs
-# option_one = data[randint(0,(len(data)-1))]
-# option_two = data[randint(0,(len(data)-1))]
-# score_one = option_one["follower_count"]
-# score_two = option_two["follower_count"]
-# # print(option_one["follower_count"])
-# # print(option_two["follower_count"])
 
-# def format():
-#     print(logo)
-#     print(f"Compare A: {option_one['name']}, a {option_one['description']}, from {option_one['country']}.")
-#     print (vs)
-#     print(f"Compare A: {option_two['name']}, a {option_two['description']}, from {option_two['country']}.")
-#     user_choice = input(("Who has more followers? Type 'A' or 'B': "))
-
-# format()
-
-# if format() == "A":
-#     print("Hey")
 
 def get_random_account():
     """Get data from random account"""

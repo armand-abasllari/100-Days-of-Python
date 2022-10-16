@@ -45,14 +45,23 @@ def deplete_resources(menu_item):
         for i in ("water", "milk", "coffee"):
             needed = menu[menu_item]["ingredients"].get(i, 0)
             resources[i] -= needed
-            if resources[i] < 0:
-                print(f"Sorry there is not enough water {i}")
 
 
-def calculate_resto(menu_item):
+def is_resource_sufficient(order_ingredients):
+    """Returns True when order can be made, False if ingredients are insufficient."""
+    for item in order_ingredients:
+        if order_ingredients[item] > resources[item]:
+            print(f"Sorry there is not enough {item}.")
+            return False
+    return True
+
+
+def calculate_money(menu_item):
     """
-    It calculates the resto.
+    If the user inputs a menu item that is a coffee, then the function will calculate the change and
+    return a string.
     """
+
     print("Please insert coins.")
     quarters = float(input("How many quarters?: "))
     dimes  = float(input("How many dimes?: "))
@@ -72,15 +81,19 @@ def calculate_resto(menu_item):
             return f"Here is your {user_choice} ☕️. Enjoy!"
 
 
-SHOULD_CONTINUE = True
 
+SHOULD_CONTINUE = True
 while SHOULD_CONTINUE:
     user_choice =input("What would you like? (espresso/latte/cappuccino): ")
     if user_choice == "off":
         SHOULD_CONTINUE = False
+
     if user_choice == ("espresso") or user_choice == ("latte") or user_choice == ("cappuccino"):
-        deplete_resources(user_choice)
-        print (calculate_resto(user_choice))
+        drink = menu[user_choice]
+        if is_resource_sufficient(drink["ingredients"]):
+            deplete_resources(user_choice)
+            print(calculate_money(user_choice))
+
     if user_choice == "report":
         print(f"Water: {resources['water']}\
         \nMilk: {resources['milk']}\

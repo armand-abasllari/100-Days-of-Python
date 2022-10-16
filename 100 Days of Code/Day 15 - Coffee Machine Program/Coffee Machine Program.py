@@ -33,6 +33,8 @@ resources = {
     "coffee": 100,
 }
 resources["Money"] = 0
+
+
 def deplete_resources(menu_item):
     """
     If the user's choice is in the menu, then deplete the resources needed to make that choice.
@@ -60,23 +62,16 @@ def calculate_resto(menu_item):
 
     if menu_item == "espresso" or menu_item == "latte" or menu_item == "cappuccino":
         resto = menu[menu_item]["cost"]
-        x = menu[user_choice]["cost"]
-        resources["Money"] += x
+        resources["Money"] += resto
         if inserted_money >= resto:
-            return f"Here is ${round(inserted_money - resto,2)} in change.\nHere is your {user_choice} ☕️. Enjoy!"
+            return f"Here is ${round(inserted_money - resto,2)} in change.\
+            \nHere is your {user_choice} ☕️. Enjoy!"
         if inserted_money <= resto:
             return "Sorry that's not enough money. Money refunded."
         if inserted_money == resto:
             return f"Here is your {user_choice} ☕️. Enjoy!"
 
 
-
-
-# def money(menu_item):
-#     if user_choice == "espresso" or user_choice == "latte" or user_choice == "cappuccino":
-#         x = menu[user_choice]["cost"]
-#         resources["Money"] += x
-        
 SHOULD_CONTINUE = True
 
 while SHOULD_CONTINUE:
